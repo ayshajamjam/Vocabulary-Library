@@ -99,6 +99,9 @@ def individual_word_count_non_stop_word(corpus):
 
     return word_list
 
+def summarize():
+    pass
+
 # Find popular words excluding stop words
 def top_k_words(corpus, k):
     word_list = individual_word_count_non_stop_word(corpus)
