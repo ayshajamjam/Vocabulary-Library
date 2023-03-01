@@ -19,3 +19,5 @@ Often times when we look at a website, we are confronted with new terms. Instead
 ## Libraries
 
 1. Beautiful Soup: Python library to pull data out of HTML and XML files. It creates a parse tree for parsed pages that can be used to extract data from HTML, which is useful for web scraping.
+
+2. lxml library: parser that works well even with broken HTML code
