@@ -35,7 +35,11 @@ Often times when we look at a website, we are confronted with new terms. Instead
 
 ## Tools Used
 
-1. Linting/Static Analysis- CodeQL 
+1. Static Analysis- CodeQL 
 2. Dependency management- Dependapot
-3. Unit testing- 
+3. Unit testing- PyTest
 4. Package manager- pip
+5. CI/CD- GitHub Actions
+6. Fake data- Fakr
+7. Linting- flake8
+8. Autoformatter: black
