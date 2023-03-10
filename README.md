@@ -6,7 +6,6 @@ This project is a chrome extension that can parse through your screen and determ
 
 [![Issues](https://img.shields.io/github/issues/ayshajamjam/vocabulary-extension?color=%23caf3fe)](https://github.com/ayshajamjam/Vocabulary-Extension/issues)
 
-
 [![codecov](https://codecov.io/gh/ayshajamjam/vocabulary-extension/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/github/ayshajamjam/vocabulary-extension?branch=master)
 
 ## Overview
@@ -18,6 +17,16 @@ Often times when we look at a website, we are confronted with new terms. Instead
 1. conda install beautifulsoup4
 2. Install virtual environment: python -m venv env
 3. Activate virtual env: source env/bin/activate
+4. pip install requests
+5. pip install nltk
+6. pip install matplotlib
+7. pip install sklearn
+8. pip install scikit-learn
+9. pip install pandas
+10. pip install lxml
+11. pip intsall pytest
+12. pip install black
+13. pip install flake8
 
 ## Libraries
 
@@ -35,11 +44,23 @@ Often times when we look at a website, we are confronted with new terms. Instead
 
 ## Tools Used
 
-1. Static Analysis- CodeQL 
-2. Dependency management- Dependapot
-3. Unit testing- PyTest
-4. Package manager- pip
-5. CI/CD- GitHub Actions
-6. Fake data- Fakr
-7. Linting- flake8
-8. Autoformatter: black
+1. **Static Analysis**- CodeQL 
+2. **Dependency management**- Dependapot
+3. **Unit testing**- PyTest
+4. **Package manager**- pip
+5. **CI/CD**- GitHub Actions
+6. **Fake data**- Fakr
+7. **Linting**- flake8
+8. **Autoformatter**- black
+
+## Make Commands
+
+**make:** list available commands
+**make develop:** install and build this library and its dependencies using pip
+**make build:** build the library using setuptools
+**make lint:** perform static analysis of this library with flake8 and black
+**make format:** autoformat this library using black
+**make annotate:** run type checking using mypy
+**make test:** run automated tests with pytest
+**make coverage:** run automated tests with pytest and collect coverage information
+**make dist:** package library for distribution

@@ -28,7 +28,6 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 
-
 [project.license]
 file = "LICENSE"
 
@@ -48,6 +47,17 @@ develop = [
     "pytest-cov>=2.6.1",
     "twine",
     "wheel",
+    "beautifulsoup4",
+    "requests",
+    "nltk",
+    "matplotlib",
+    "sklearn",
+    "scikit-learn",
+    "pandas",
+    "lxml"
+]
+other = [
+    "beautifulsoup4"
 ]
 
 [tool.black]
