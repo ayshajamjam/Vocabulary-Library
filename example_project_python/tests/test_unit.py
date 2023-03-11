@@ -1,9 +1,18 @@
-from example_project_python import word_count, retrieve_sentences, retrieve_all_words, retrieve_all_non_stop_words, individual_word_count, individual_word_count_non_stop_word, top_k_words
-from unittest.mock import patch
+from example_project_python import (
+    word_count,
+    retrieve_sentences,
+    retrieve_all_words,
+    retrieve_all_non_stop_words,
+    individual_word_count,
+    individual_word_count_non_stop_word,
+    top_k_words,
+)
+
+# from unittest.mock import patch
 import unittest
 
 
-class TestVocab(unittest.TestCase):
+class Test(unittest.TestCase):
     # Example unit tests
 
     # def test_hello():
@@ -42,7 +51,9 @@ class TestVocab(unittest.TestCase):
         self.assertEqual(['She smokes...'], retrieve_sentences(s2))
         self.assertEqual(['Hi!', 'My name is Khadija.'], retrieve_sentences(s3))
         self.assertEqual(['Sarah, a kind lady, helped me find my way to the mall.'], retrieve_sentences(s4))
-        self.assertEqual(["Oh my God!", "I can't believe it!", "I'm so surprised to hear this news."], retrieve_sentences(s5))
+        self.assertEqual(
+            ["Oh my God!", "I can't believe it!", "I'm so surprised to hear this news."], retrieve_sentences(s5)
+        )
 
     def test_retrieve_words(self):
         s1 = ""
@@ -56,8 +67,14 @@ class TestVocab(unittest.TestCase):
         self.assertEqual([], retrieve_all_words(s1))
         self.assertEqual(['she', 'smokes'], retrieve_all_words(s2))
         self.assertEqual(['hi', 'my', 'name', 'is', 'khadija'], retrieve_all_words(s3))
-        self.assertEqual(['sarah', 'a', 'kind', 'lady', 'helped', 'me', 'find', 'my', 'way', 'to', 'the', 'mall'], retrieve_all_words(s4))
-        self.assertEqual(['oh', 'my', 'god', 'i', "can't", 'believe', 'it', "i'm", 'so', 'surprised', 'to', 'hear', 'this', 'news'], retrieve_all_words(s5))
+        self.assertEqual(
+            ['sarah', 'a', 'kind', 'lady', 'helped', 'me', 'find', 'my', 'way', 'to', 'the', 'mall'],
+            retrieve_all_words(s4),
+        )
+        self.assertEqual(
+            ['oh', 'my', 'god', 'i', "can't", 'believe', 'it', "i'm", 'so', 'surprised', 'to', 'hear', 'this', 'news'],
+            retrieve_all_words(s5),
+        )
         self.assertEqual([], retrieve_all_words(s1))
         self.assertEqual(['merry', 'go', 'round'], retrieve_all_words(s7))
 
@@ -67,7 +84,9 @@ class TestVocab(unittest.TestCase):
         s3 = "The New York Times"
         s4 = "Are you surprised 8 people showed up?"
 
-        self.assertEqual(['oh', 'god', "can't", 'believe', "i'm", 'surprised', 'hear', 'news'], retrieve_all_non_stop_words(s1))
+        self.assertEqual(
+            ['oh', 'god', "can't", 'believe', "i'm", 'surprised', 'hear', 'news'], retrieve_all_non_stop_words(s1)
+        )
         self.assertEqual([], retrieve_all_non_stop_words(s2))
         self.assertEqual(['new', 'york', 'times'], retrieve_all_non_stop_words(s3))
         self.assertEqual(['surprised', '8', 'people', 'showed'], retrieve_all_non_stop_words(s4))
@@ -117,15 +136,16 @@ class TestVocab(unittest.TestCase):
         e2 = "Scorpions lay in the sun, sizzling."
 
         self.assertEqual([('man', 2), ('car', 2), ('offering', 1)], top_k_words(s1, 3))
-        self.assertEqual([('warmth', 2), ('midges', 2), ('photogenic', 1), ('mother', 1), ('died', 1)], top_k_words(s2, 5))
+        self.assertEqual(
+            [('warmth', 2), ('midges', 2), ('photogenic', 1), ('mother', 1), ('died', 1)], top_k_words(s2, 5)
+        )
         self.assertEqual([('seen', 3), ('whether', 2)], top_k_words(s3, 2))
         self.assertEqual([('room', 2), ('north', 2), ('cases', 2), ('letters', 2)], top_k_words(s4, 4))
-        
+
         self.assertRaises(ValueError, top_k_words, e1, 1)
         self.assertRaises(ValueError, top_k_words, e1, 3)
         self.assertRaises(ValueError, top_k_words, e2, 10)
 
-        # Integration Test
 
 # if __name__ == '__main__':
 #     unittest.main()

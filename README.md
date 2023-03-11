@@ -70,7 +70,8 @@ Often times when we look at a website, we are confronted with new terms. Instead
 Run either: 
 
 1. make test
-2. python -m unittest example_project_python/tests/test_all.py
+2. python -m unittest example_project_python/tests/test_unit.py
+3. python -m unittest example_project_python/tests/test_integration.py
 
 **Useful Links**
 1. https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer

@@ -5,9 +5,10 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize, WhitespaceTokenizer
 from nltk.corpus import stopwords, wordnet
 from collections import defaultdict
-import matplotlib.pyplot as plt
-from sklearn.feature_extraction.text import CountVectorizer
-import pandas as pd
+
+# import matplotlib.pyplot as plt
+# from sklearn.feature_extraction.text import CountVectorizer
+# import pandas as pd
 
 # Sample code
 
@@ -25,6 +26,7 @@ import pandas as pd
 
 # My project code
 
+
 # TODO
 def get_soup(url):
     """
@@ -35,6 +37,7 @@ def get_soup(url):
 
     return soup
 
+
 # TODO
 def get_content(soup):
     """
@@ -43,6 +46,7 @@ def get_content(soup):
     content = soup.find('div', class_="mw-content-container").text
     content = re.sub('[^A-Za-z0-9]+', ' ', content.lower())
     return content
+
 
 # TODO
 def get_links(soup):
@@ -57,24 +61,29 @@ def get_links(soup):
 
     return links_arr
 
+
 # TODO
 def find_advanced_words(corpus):
     pass
+
 
 # TODO
 def clean_corpus(corpus):
     # Retain alpha-numeric characters and apostrophes
     return re.sub("[^A-Za-z0-9']+", ' ', corpus.lower())
 
+
 # Sentence tokenization
 def retrieve_sentences(corpus):
     return sent_tokenize(corpus)
+
 
 # Word tokenization
 def retrieve_all_words(corpus):
     # tokenize by white space
     ws = WhitespaceTokenizer()
     return ws.tokenize(clean_corpus(corpus))
+
 
 # Non-stop word tokenization
 def retrieve_all_non_stop_words(corpus):
@@ -102,6 +111,7 @@ def word_count(corpus):
     # bag_of_words = count_vectorizer.fit_transform(content.splitlines())
     # pd.DataFrame(bag_of_words.toarray(), columns = count_vectorizer.get_feature_names())
 
+
 def individual_word_count(corpus):
     word_count = defaultdict(int)
     word_list = retrieve_all_words(corpus)
@@ -109,6 +119,7 @@ def individual_word_count(corpus):
     for word in word_list:
         word_count[str(word)] += 1
     return word_count
+
 
 def individual_word_count_non_stop_word(corpus):
     word_count = defaultdict(int)
@@ -119,9 +130,11 @@ def individual_word_count_non_stop_word(corpus):
 
     return word_count
 
+
 # TODO
 def summarize():
     pass
+
 
 # Find popular words excluding stop words
 def top_k_words(corpus, k):
@@ -134,6 +147,7 @@ def top_k_words(corpus, k):
 
     return sorted_word_list
 
+
 # TODO
 # Returns a plot with freq distributions of non-stop words
 def frequency_distribution(corpus):
@@ -141,6 +155,7 @@ def frequency_distribution(corpus):
 
     fd = nltk.FreqDist(word_list)
     fd.plot()
+
 
 # TODO
 def get_definition(word):
