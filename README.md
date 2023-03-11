@@ -64,3 +64,15 @@ Often times when we look at a website, we are confronted with new terms. Instead
 **make test:** run automated tests with pytest
 **make coverage:** run automated tests with pytest and collect coverage information
 **make dist:** package library for distribution
+
+## Testing Commands
+
+Run either: 
+
+1. make test
+2. python -m unittest example_project_python/tests/test_all.py
+
+**Useful Links**
+1. https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
+2. https://realpython.com/python-testing/#writing-integration-tests
+3. https://www.tutorialspoint.com/python_web_scraping/python_web_scraping_testing_with_scrapers.htm
