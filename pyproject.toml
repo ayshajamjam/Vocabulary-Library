@@ -54,7 +54,8 @@ develop = [
     "sklearn",
     "scikit-learn",
     "pandas",
-    "lxml"
+    "lxml",
+    "urlopen"
 ]
 other = [
     "beautifulsoup4"
