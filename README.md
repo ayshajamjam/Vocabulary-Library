@@ -10,7 +10,7 @@ This project is a chrome extension that can parse through your screen and determ
 
 
 [![Build Status](https://github.com/ayshajamjam/vocabulary-extension/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/ayshajamjam/vocabulary-extensions/actions?query=workflow%3A%22Build+Status%22)
-[![codecov](https://codecov.io/gh/ayshajamjam/vocabulary-extension/branch/main/graph/badge.svg?token=3N6NOPL4RE)](https://codecov.io/gh/ayshajamjam/vocabulary-extension)
+[![codecov](https://codecov.io/gh/ayshajamjam/vocabulary-extension/branch/main/graph/badge.svg?token=134dc584-f190-47f1-952d-173a30594f78)](https://codecov.io/gh/ayshajamjam/vocabulary-extension)
 
 ## Overview
 
