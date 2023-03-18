@@ -8,6 +8,10 @@ This project is a chrome extension that can parse through your screen and determ
 
 [![codecov](https://codecov.io/gh/ayshajamjam/vocabulary-extension/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/github/ayshajamjam/vocabulary-extension?branch=master)
 
+
+[![Build Status](https://github.com/ayshajamjam/vocabulary-extension/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/ayshajamjam/vocabulary-extensions/actions?query=workflow%3A%22Build+Status%22)
+[![codecov](https://codecov.io/gh/ayshajamjam/vocabulary-extension/branch/main/graph/badge.svg?token=134dc584-f190-47f1-952d-173a30594f78)](https://codecov.io/gh/ayshajamjam/vocabulary-extension)
+
 ## Overview
 
 Often times when we look at a website, we are confronted with new terms. Instead of having to individually right click on every single term to look up the definition, this extension will create a bank of vocab words on the article and display their meanings. If you click the extension's button, you will see the list of words and their definitions. You can also save words for future reference.

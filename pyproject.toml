@@ -51,7 +51,6 @@ develop = [
     "requests",
     "nltk",
     "matplotlib",
-    "sklearn",
     "scikit-learn",
     "pandas",
     "lxml",
@@ -72,8 +71,7 @@ ignore = [
 ]
 
 [tool.flake8]
-ignore = ['E203', 'W503']
-max-line-length=120
+ignore = ['E203', 'W503', 'E501', 'F401']
 exclude=[
     'example_project_python/tests/*'
 ]
