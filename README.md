@@ -27,6 +27,7 @@ Often times when we look at a website, we are confronted with new terms. Instead
 11. pip intsall pytest
 12. pip install black
 13. pip install flake8
+14. pip install urlopen
 
 ## Libraries
 
@@ -77,3 +78,11 @@ Run either:
 1. https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
 2. https://realpython.com/python-testing/#writing-integration-tests
 3. https://www.tutorialspoint.com/python_web_scraping/python_web_scraping_testing_with_scrapers.htm
+
+
+## Using This Library Instructions (not yet verified by me)
+1. Clone
+2. pip install .[develop]
+3. python setup.py build
+4. make lint
+5. make test
