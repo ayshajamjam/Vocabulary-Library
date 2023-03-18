@@ -51,7 +51,6 @@ develop = [
     "requests",
     "nltk",
     "matplotlib",
-    "sklearn",
     "scikit-learn",
     "pandas",
     "lxml",
