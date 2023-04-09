@@ -168,7 +168,10 @@ if __name__ == '__main__':
     content = get_content(soup)
     links = get_links(soup)
 
-    corpus = "All I know is that I stood spellbound in his high-ceilinged studio room, with its north-facing windows in front of the heavy mahogany bureau at which Michael said he no longer worked because the room was so cold, even in midsummer; and that, while we talked of the difficulty of heating old houses, a strange feeling came upon me, as if it were not he who had abandoned that place of work but I, as if the spectacles cases, letters and writing materials that had evidently lain untouched for months in the soft north light had once been my spectacle cases, my letters and my writing materials."
+    for link in links:
+        print(link)
+
+    # corpus = "I like to teach math. Math is a beautiful field. I am a person who likes to do math and play football on the field."
 
     # count = word_count(corpus)
     # print(count)
@@ -185,7 +188,7 @@ if __name__ == '__main__':
     # word_count = individual_word_count(corpus)
     # print(word_count)
 
-    print(top_k_words(corpus, 4))
+    # print(top_k_words(corpus, 4))
 
     # print(get_definition("valley"))
 
