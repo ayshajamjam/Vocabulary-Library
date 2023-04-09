@@ -15,6 +15,40 @@ Often times when we look at a website, we are confronted with new terms. Instead
 
 ## Installation
 
+1. clone from GitHub or pip install vocabulary extension
+2. Install virtual environment: python -m venv env
+3. Activate virtual env: source env/bin/activate
+2. Install the dependencies: pip install .[develop]
+3. python setup.py build
+4. make lint
+5. make test
+6. Running main: python example_project_python/vocab.py
+
+## Functions Available
+
+X marks functions that have unit tests written
+
+- [] get_soup(url)                     --> Returns scraped BeautifulSoup object
+- [] get_content(soup)                 --> Returns main content of the page
+- [] get_links(soup)                   --> Return array of links on page
+- [] clean_corpus(corpus)              --> Retain alpha-numeric characters and apostrophes
+- [] retrieve_sentences(corpus)        --> Tokenizes sentences using NLTK
+- [X] retrieve_all_words(corpus)        --> Tokenizes words (including stop words) using NLTK
+- [] retrieve_all_non_stop_words(corpus) --> Tokenizes non-stop-words
+- [X] word_count(corpus)                --> Counts number of words (including stop words) in corpus
+- [X] individual_word_count(corpus)     --> Counts number of times each individual word appears
+- [] individual_word_count_non_stop_word --> Counts number of non-stop-words in corpus
+- [] top_k_words(corpus, k)            --> Finds top k words (excluding stop words)
+- [] frequency_distributions(corpus)   --> Returns a plot with freq distributions of non-stop words
+- [] get_definition(word)              --> Uses wordnet to retrieve definition
+
+## Functions To Be Implemented
+
+- find_advanced_words(corpus)
+- summarize()
+
+## Installation (manual)
+
 1. conda install beautifulsoup4
 2. Install virtual environment: python -m venv env
 3. Activate virtual env: source env/bin/activate
@@ -79,11 +113,3 @@ Run either:
 1. https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
 2. https://realpython.com/python-testing/#writing-integration-tests
 3. https://www.tutorialspoint.com/python_web_scraping/python_web_scraping_testing_with_scrapers.htm
-
-
-## Using This Library Instructions (not yet verified by me)
-1. Clone
-2. pip install .[develop]
-3. python setup.py build
-4. make lint
-5. make test
