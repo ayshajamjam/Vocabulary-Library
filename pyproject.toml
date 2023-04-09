@@ -7,9 +7,9 @@ requires = [
 build-backend="setuptools.build_meta"
 
 [project]
-name = "example-project-python"
-authors = [{name = "Your Name", email = "Your_Email@gmail.com"}]
-description="An example python project"
+name = "Vocabulary-Extension"
+authors = [{name = "Aysha Jamal", email = "aj2604@columbia.edu"}]
+description="Python library for dealing with text"
 readme = "README.md"
 version = "0.1.0"
 requires-python = ">=3.7"
@@ -32,7 +32,7 @@ classifiers = [
 file = "LICENSE"
 
 [project.urls]
-repository = "https://github.com/columbiaoss/example-project-python"
+repository = "https://github.com/ayshajamjam/Vocabulary-Extension"
 
 [project.optional-dependencies]
 develop = [
@@ -54,7 +54,8 @@ develop = [
     "scikit-learn",
     "pandas",
     "lxml",
-    "urlopen"
+    "urlopen",
+    "pip-login"
 ]
 other = [
     "beautifulsoup4"

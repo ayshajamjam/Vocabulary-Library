@@ -63,6 +63,8 @@ X marks functions that have unit tests written
 12. pip install black
 13. pip install flake8
 14. pip install urlopen
+15. pip install check-manifest
+16. pip install pip-login (not for library user- just me to update PyPI)
 
 ## Libraries
 
