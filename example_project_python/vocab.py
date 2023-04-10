@@ -5,6 +5,7 @@ import nltk
 from nltk.tokenize import sent_tokenize, word_tokenize, WhitespaceTokenizer
 from nltk.corpus import stopwords, wordnet
 from collections import defaultdict
+nltk.download('stopwords')
 
 # import matplotlib.pyplot as plt
 # from sklearn.feature_extraction.text import CountVectorizer
