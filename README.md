@@ -66,6 +66,16 @@ X marks functions that have unit tests written
 15. pip install check-manifest
 16. pip install pip-login (not for library user- just me to update PyPI)
 
+#### Upload to PyPI
+1. python -m pip install --upgrade pip
+2. python -m pip install --upgrade build
+3. python -m build
+4. python -m pip install --upgrade twine
+5. Upload to testPyPI: python3 -m twine upload --repository testpypi dist/*
+6. Upload to PyPI: twine upload dist/*
+
+
+
 ## Libraries
 
 1. Beautiful Soup: Python library to pull data out of HTML and XML files. It creates a parse tree for parsed pages that can be used to extract data from HTML, which is useful for web scraping.
