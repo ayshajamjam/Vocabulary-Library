@@ -10,7 +10,9 @@ from collections import defaultdict
 # from sklearn.feature_extraction.text import CountVectorizer
 # import pandas as pd
 
+
 # My project code
+
 
 # TODO
 def get_soup(url: str) -> BeautifulSoup:
