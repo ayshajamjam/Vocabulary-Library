@@ -15,15 +15,11 @@ from collections import defaultdict
 # TODO
 def get_soup(url: str) -> BeautifulSoup:
     """Summary line.
-
     Takes in a url to be scraped and returns a BeautifulSoup object
-
     Args:
         url: any website URL
-
     Returns:
-        Returns scraped BeautifulSoup object
-        
+        Returns scraped BeautifulSoup object 
     """
     html_text = requests.get(url).text
     soup = BeautifulSoup(html_text, 'lxml')
