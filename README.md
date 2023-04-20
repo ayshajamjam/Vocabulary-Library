@@ -11,7 +11,7 @@ This project is a chrome extension that can parse through your screen and determ
 
 [![PyPI](https://img.shields.io/pypi/v/Vocabulary-Extension)](https://pypi.org/project/Vocabulary-Extension/0.1.0/)
 
-[![Documentation Status](https://readthedocs.org/projects/vocabulary-extension/badge/?version=latest)](https://vocabulary-extension.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/vocabulary-extension/badge/?version=latest)](https://ayshajamjam.github.io/Vocabulary-Extension/)
 
 Note: ReadtheDocs is failing but GitHub pages works fine. Error: "Some files were detected in an unsupported output path, '_build/html'. Ensure your project is configured to use the output path '$READTHEDOCS_OUTPUT/html' instead." _build/html is neccessary for GitHub pages to work.
 
