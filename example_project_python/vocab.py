@@ -263,8 +263,8 @@ if __name__ == '__main__':
     # words = retrieve_all_non_stop_words(corpus)
     # print(words)
 
-    word_count = individual_word_count_non_stop_word(corpus)
-    print(word_count)
+    # word_count = individual_word_count_non_stop_word(corpus)
+    # print(word_count)
 
     # print(top_k_words(corpus, 4))
 
