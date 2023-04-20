@@ -76,6 +76,7 @@ X marks functions that have unit tests written
 17. pip install sphinx
 18. pip install sphinx_rtd_theme
 19. pip install recommonmark
+20. pip install sphinxcontrib-napoleon
 
 #### Upload to PyPI
 1. python -m pip install --upgrade pip

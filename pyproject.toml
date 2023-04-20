@@ -58,7 +58,8 @@ develop = [
     "pip-login",
     "sphinx",
     "sphinx_rtd_theme",
-    "recommonmark"
+    "recommonmark",
+    "sphinxcontrib-napoleon"
 ]
 other = [
     "beautifulsoup4"

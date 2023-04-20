@@ -10,28 +10,23 @@ from collections import defaultdict
 # from sklearn.feature_extraction.text import CountVectorizer
 # import pandas as pd
 
-# Sample code
-
-# def hello() -> str:
-#     return "Hello, world!"
-
-
-# def print_hello() -> None:
-#     print(hello())
-
-
-# def add(x, y):
-#     return x + y
-
-
 # My project code
 
-
 # TODO
-def get_soup(url):
+def get_soup(url: str) -> BeautifulSoup:
+
+    """Summary line.
+
+    Takes in a url to be scraped and returns a BeautifulSoup object
+
+    Args:
+        url: any website URL
+
+    Returns:
+        Returns scraped BeautifulSoup object
+        
     """
-    Returns scraped BeautifulSoup object
-    """
+
     html_text = requests.get(url).text
     soup = BeautifulSoup(html_text, 'lxml')
 

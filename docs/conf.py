@@ -19,7 +19,7 @@ master_doc="index"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['recommonmark']
+extensions = ['recommonmark', 'sphinxcontrib.napoleon']
 source_suffix = ['.rst', '.md']
 
 templates_path = ['_templates']
