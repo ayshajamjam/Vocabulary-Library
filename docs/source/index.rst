@@ -6,6 +6,14 @@
 Vocabulary Extension Documentation!
 ================================================
 
+Introduction
+==================
+
+Welcome to Vocabulary Extension's documentation. Here we explain how to setup the library, the functions available, and various examples.
+
+About
+==================
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -14,9 +22,3 @@ Vocabulary Extension Documentation!
    examples.rst
    modules.rst
    
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
