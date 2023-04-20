@@ -57,7 +57,7 @@ develop = [
     "urlopen",
     "pip-login",
     "sphinx",
-    "sphinx-nameko-theme",
+    "sphinx_rtd_theme",
     "recommonmark"
 ]
 other = [

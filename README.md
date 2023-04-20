@@ -52,8 +52,10 @@ X marks functions that have unit tests written
 ## Installation (manual)
 
 1. conda install beautifulsoup4
+2. mkdir env_holder
+3. cd env_holder
 2. Install virtual environment: python -m venv env
-3. Activate virtual env: source env/bin/activate
+3. Activate virtual env: source env_holder/env/bin/activate
 4. pip install requests
 5. pip install nltk
 6. pip install matplotlib
@@ -68,7 +70,7 @@ X marks functions that have unit tests written
 15. pip install check-manifest
 16. pip install pip-login (not for library user- just me to update PyPI)
 17. pip install sphinx
-18. pip install sphinx-nameko-theme
+18. pip install sphinx_rtd_theme
 19. pip install recommonmark
 
 #### Upload to PyPI
