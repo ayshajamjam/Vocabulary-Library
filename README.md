@@ -11,6 +11,10 @@ This project is a chrome extension that can parse through your screen and determ
 
 [![PyPI](https://img.shields.io/pypi/v/Vocabulary-Extension)](https://pypi.org/project/Vocabulary-Extension/0.1.0/)
 
+[![Documentation Status](https://readthedocs.org/projects/vocabulary-extension/badge/?version=latest)](https://vocabulary-extension.readthedocs.io/en/latest/?badge=latest)
+
+Note: ReadtheDocs is failing but GitHub pages works fine. Error: "Some files were detected in an unsupported output path, '_build/html'. Ensure your project is configured to use the output path '$READTHEDOCS_OUTPUT/html' instead." _build/html is neccessary for GitHub pages to work.
+
 ## Overview
 
 Often times when we look at a website, we are confronted with new terms. Instead of having to individually right click on every single term to look up the definition, this extension will create a bank of vocab words on the article and display their meanings. If you click the extension's button, you will see the list of words and their definitions. You can also save words for future reference.
