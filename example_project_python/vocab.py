@@ -105,6 +105,7 @@ def retrieve_all_words(corpus: str) -> list:
     ws = WhitespaceTokenizer()
     return ws.tokenize(clean_corpus(corpus))
 
+
 # Non-stop word tokenizations
 def retrieve_all_non_stop_words(corpus: str) -> list:
     """Returns a list of words in the corpus, excluding non-value adding stop words such as 'the', 'as', 'and', etc.
@@ -123,6 +124,7 @@ def retrieve_all_non_stop_words(corpus: str) -> list:
             non_stop_words_list.append(word)
 
     return non_stop_words_list
+
 
 # Word frequency
 def word_count(corpus: str) -> int:
@@ -223,9 +225,10 @@ def frequency_distribution(corpus: str) -> nltk.FreqDist:
     fd = nltk.FreqDist(word_list)
     fd.plot()
 
+
 # TODO
 def get_definition(word: str) -> str:
-    """ Retrieves definition of a word
+    """Retrieves definition of a word
 
     :param word: word to be defined
     :type word: str
