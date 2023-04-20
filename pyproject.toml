@@ -55,7 +55,10 @@ develop = [
     "pandas",
     "lxml",
     "urlopen",
-    "pip-login"
+    "pip-login",
+    "sphinx",
+    "sphinx-nameko-theme",
+    "recommonmark"
 ]
 other = [
     "beautifulsoup4"
