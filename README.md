@@ -1,6 +1,8 @@
 # Vocabulary Extension
 
-This project is a chrome extension that can parse through your screen and determine which vocabulary words you may be unfamiliar with.
+This project aspires to be a chrome extension that can parse through your screen and determine which vocabulary words you may be unfamiliar with.
+
+Currently, it is a library that deals with text and web scraping, providing useful functions to aid the library's user.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -17,7 +19,8 @@ Note: ReadtheDocs is failing but GitHub pages works fine. Error: "Some files wer
 
 ## Overview
 
-Often times when we look at a website, we are confronted with new terms. Instead of having to individually right click on every single term to look up the definition, this extension will create a bank of vocab words on the article and display their meanings. If you click the extension's button, you will see the list of words and their definitions. You can also save words for future reference.
+This project is a library that can parse through a corpus of text and determine which vocabulary words you may be unfamiliar with. It also provides general text handling functions that can be useful when working on project involving text and scraping. It is naive in that it does not pre-determine your vocabulary level first. The ultimate goal is to turn this library into a usable web extension. Often times when we look at a website, we are confronted with new terms. Instead of having to individually right click on every single term to look up the definition, this extension will create a bank of vocab words on the article and display their meanings. If you click the extension's button, you will see the list of words and their definitions. You can also save words for future reference.
+
 
 ## Installation
 
@@ -112,6 +115,7 @@ X marks functions that have unit tests written
 6. **Fake data**- Fakr
 7. **Linting**- flake8
 8. **Autoformatter**- black
+9. **Documentation**- GitHub pages, Sphinx
 
 ## Make Commands
 
@@ -137,3 +141,27 @@ Run either:
 1. https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
 2. https://realpython.com/python-testing/#writing-integration-tests
 3. https://www.tutorialspoint.com/python_web_scraping/python_web_scraping_testing_with_scrapers.htm
+
+Documentation
+1. https://sphinx-rtd-tutorial.readthedocs.io/en/latest/build-the-docs.html
+2. https://gist.github.com/GLMeece/222624fc495caf6f3c010a8e26577d31
+3. https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html
+4. https://stackoverflow.com/questions/10324393/sphinx-build-fail-autodoc-cant-import-find-module
+5. https://stackoverflow.com/questions/13516404/sphinx-error-unknown-directive-type-automodule-or-autoclass
+
+
+RST Cheatsheets
+1. https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst
+2. https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/WritingReST/Reference/Code/Codeblocks.html
+3. https://sublime-and-sphinx-guide.readthedocs.io/en/latest/code_blocks.html
+
+### Running Documentation Locally
+
+**To (re)generate rsts for doctrings:**
+1. sphinx-apidoc -o ./source ../example_project_python
+
+1. cd docs
+2. make clean
+3. make html
+4. open build/html/index.html
+
