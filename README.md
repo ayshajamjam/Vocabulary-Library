@@ -67,6 +67,9 @@ X marks functions that have unit tests written
 14. pip install urlopen
 15. pip install check-manifest
 16. pip install pip-login (not for library user- just me to update PyPI)
+17. pip install sphinx
+18. pip install sphinx-nameko-theme
+19. pip install recommonmark
 
 #### Upload to PyPI
 1. python -m pip install --upgrade pip
