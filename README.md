@@ -21,6 +21,17 @@ Note: ReadtheDocs is failing but GitHub pages works fine. Error: "Some files wer
 
 This project is a library that can parse through a corpus of text and determine which vocabulary words you may be unfamiliar with. It also provides general text handling functions that can be useful when working on project involving text and scraping. It is naive in that it does not pre-determine your vocabulary level first. The ultimate goal is to turn this library into a usable web extension. Often times when we look at a website, we are confronted with new terms. Instead of having to individually right click on every single term to look up the definition, this extension will create a bank of vocab words on the article and display their meanings. If you click the extension's button, you will see the list of words and their definitions. You can also save words for future reference.
 
+## Quick Example
+
+**get_links():** This is a function that allows you to get all the links on a particular webpage.
+
+### Input
+
+![get_links input](images/input_links.png)
+
+### Output
+
+![get_links output](images/output_links.png)
 
 ## Installation
 
@@ -70,7 +81,7 @@ X marks functions that have unit tests written
 8. pip install scikit-learn
 9. pip install pandas
 10. pip install lxml
-11. pip intsall pytest
+11. pip install pytest
 12. pip install black
 13. pip install flake8
 14. pip install urlopen

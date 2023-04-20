@@ -61,9 +61,9 @@ def get_links(soup: BeautifulSoup) -> list:
     return links_arr
 
 
-# TODO
-def find_advanced_words(corpus: str):
-    pass
+# # TODO
+# def find_advanced_words(corpus: str):
+#     pass
 
 
 # TODO
@@ -183,9 +183,9 @@ def individual_word_count_non_stop_word(corpus: str) -> int:
     return word_count
 
 
-# TODO
-def summarize():
-    pass
+# # TODO
+# def summarize():
+#     pass
 
 
 # Find popular words excluding stop words
@@ -240,14 +240,16 @@ def get_definition(word: str) -> str:
 
 
 if __name__ == '__main__':
-    soup = get_soup('https://en.wikipedia.org/wiki/Freddie_Mercury')
-    content = get_content(soup)
-    links = get_links(soup)
+    # soup = get_soup('https://en.wikipedia.org/wiki/Freddie_Mercury')
+    # corpus = get_content(soup)
+    # print(corpus)
 
-    for link in links:
-        print(link)
+    # links = get_links(soup)
 
-    # corpus = "I like to teach math. Math is a beautiful field. I am a person who likes to do math and play football on the field."
+    # for link in links:
+    #     print(link)
+
+    corpus = "I like to teach math. Math is a beautiful field. I am a person who likes to do math at school and play football afterwards."
 
     # count = word_count(corpus)
     # print(count)
@@ -261,14 +263,11 @@ if __name__ == '__main__':
     # words = retrieve_all_non_stop_words(corpus)
     # print(words)
 
-    # word_count = individual_word_count(corpus)
-    # print(word_count)
+    word_count = individual_word_count_non_stop_word(corpus)
+    print(word_count)
 
     # print(top_k_words(corpus, 4))
 
     # print(get_definition("valley"))
-
-    # words = retrieve_all_non_stop_words(corpus)
-    # print(words)
 
     # frequency_distribution(corpus)
