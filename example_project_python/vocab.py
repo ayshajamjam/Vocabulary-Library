@@ -15,13 +15,13 @@ from collections import defaultdict
 
 
 # TODO
-def get_soup(url):
-    """Summary line.
-    Takes in a url to be scraped and returns a BeautifulSoup object
-    Args:
-        url: any website URL
-    Returns:
-        Returns scraped BeautifulSoup object
+def get_soup(url: str) -> BeautifulSoup:
+    """Takes in a url to be scraped and returns a BeautifulSoup object
+
+    :param url: any website URL
+    :type url: string
+    :return: scraped BeautifulSoup object
+    :rtype: BeautifulSoup
     """
     html_text = requests.get(url).text
     soup = BeautifulSoup(html_text, 'lxml')
@@ -30,9 +30,13 @@ def get_soup(url):
 
 
 # TODO
-def get_content(soup):
-    """
-    Returns main content of the page
+def get_content(soup: BeautifulSoup) -> str:
+    """Returns main content of the URL page
+
+    :param soup: BeautifulSoup object extracted via get_soup(url)
+    :type soup: BeautifulSoup
+    :return: extracted content of website
+    :rtype: str
     """
     content = soup.find('div', class_="mw-content-container").text
     content = re.sub('[^A-Za-z0-9]+', ' ', content.lower())
@@ -40,9 +44,13 @@ def get_content(soup):
 
 
 # TODO
-def get_links(soup):
-    """
-    Returns array of links
+def get_links(soup: BeautifulSoup) -> list:
+    """Returns array of links
+
+    :param soup: BeautifulSoup object extracted via get_soup(url)
+    :type soup: BeautifulSoup
+    :return: a list of links extracted from the url provided
+    :rtype: list
     """
     links_arr = []
     links = soup.find_all('a', attrs={'href': re.compile("^http://")})
@@ -54,30 +62,59 @@ def get_links(soup):
 
 
 # TODO
-def find_advanced_words(corpus):
+def find_advanced_words(corpus: str):
     pass
 
 
 # TODO
-def clean_corpus(corpus):
+def clean_corpus(corpus: str) -> str:
+    """Cleans corpus by removing non-alphanumeric characters and lower-casing all the words
+
+    :param corpus: raw corpus of text
+    :type corpus: str
+    :return: cleaned up version of corpus
+    :rtype: str
+    """
     # Retain alpha-numeric characters and apostrophes
     return re.sub("[^A-Za-z0-9']+", ' ', corpus.lower())
 
 
 # Sentence tokenization
-def retrieve_sentences(corpus):
+def retrieve_sentences(corpus: str) -> list:
+    """Tokenizes text in corpus into sentences using NLTK sent_tokenize
+
+    :param corpus: raw corpus of text to be split into sentences
+    :type corpus: str
+    :return: list of tokenized sentences
+    :rtype: list
+    """
     return sent_tokenize(corpus)
 
 
 # Word tokenization
-def retrieve_all_words(corpus):
+def retrieve_all_words(corpus: str) -> list:
+    """Tokenizes text in corpus into words using NLTK's whitespace tokenizer.
+    This function also cleans the corpus by removing non-alphanumeric characters
+
+    :param corpus: raw corpus of text
+    :type corpus: str
+    :return: list of tokenized words (all words)
+    :rtype: list
+    """
     # tokenize by white space
     ws = WhitespaceTokenizer()
     return ws.tokenize(clean_corpus(corpus))
 
 
-# Non-stop word tokenization
-def retrieve_all_non_stop_words(corpus):
+# Non-stop word tokenizations
+def retrieve_all_non_stop_words(corpus: str) -> list:
+    """Returns a list of words in the corpus, excluding non-value adding stop words such as 'the', 'as', 'and', etc.
+
+    :param corpus: raw corpus of text
+    :type corpus: str
+    :return: list of non-stop words
+    :rtype: list
+    """
     stop_words = set(stopwords.words('english'))
     non_stop_words_list = []
     word_list = retrieve_all_words(corpus)
@@ -90,7 +127,15 @@ def retrieve_all_non_stop_words(corpus):
 
 
 # Word frequency
-def word_count(corpus):
+def word_count(corpus: str) -> int:
+    """Returns total number of words in the corpus
+
+    :param corpus: raw corpus of text
+    :type corpus: str
+    :return: number of words in the corpus
+    :rtype: int
+    """
+
     count = 0
     word_list = retrieve_all_words(corpus)
 
@@ -103,7 +148,15 @@ def word_count(corpus):
     # pd.DataFrame(bag_of_words.toarray(), columns = count_vectorizer.get_feature_names())
 
 
-def individual_word_count(corpus):
+def individual_word_count(corpus: str) -> dict:
+    """Calculates the number of times each word in the corpus appears
+
+    :param corpus: raw corpus of text
+    :type corpus: str
+    :return: dictionary of {word: wordcount} pairs
+    :rtype: dict
+    """
+
     word_count = defaultdict(int)
     word_list = retrieve_all_words(corpus)
 
@@ -112,7 +165,15 @@ def individual_word_count(corpus):
     return word_count
 
 
-def individual_word_count_non_stop_word(corpus):
+def individual_word_count_non_stop_word(corpus: str) -> int:
+    """Word count of all words excluding stop words
+
+    :param corpus: raw corpus of text
+    :type corpus: str
+    :return: word count
+    :rtype: int
+    """
+
     word_count = defaultdict(int)
     word_list = retrieve_all_non_stop_words(corpus)
 
@@ -128,7 +189,16 @@ def summarize():
 
 
 # Find popular words excluding stop words
-def top_k_words(corpus, k):
+def top_k_words(corpus: str, k: int) -> list:
+    """Determines the k most popular words in corpus of text (excluding stop words)
+
+    :param corpus: raw corpus of text
+    :type corpus: str
+    :param k: the number of words you want returned
+    :type k: int
+    :return: list of top-k words sorted by decreasing frequency of appearance
+    :rtype: list
+    """
     word_list = individual_word_count_non_stop_word(corpus)
 
     if k > len(word_list):
@@ -141,7 +211,15 @@ def top_k_words(corpus, k):
 
 # TODO
 # Returns a plot with freq distributions of non-stop words
-def frequency_distribution(corpus):
+def frequency_distribution(corpus: str) -> nltk.FreqDist:
+    """Plots a frequency distribution graph of all non-stop words
+
+    :param corpus: raw corpus of text
+    :type corpus: str
+    :return: plot image
+    :rtype: FreqDist
+    """
+
     word_list = retrieve_all_non_stop_words(corpus)
 
     fd = nltk.FreqDist(word_list)
@@ -149,9 +227,16 @@ def frequency_distribution(corpus):
 
 
 # TODO
-def get_definition(word):
+def get_definition(word: str) -> str:
+    """Retrieves definition of a word
+
+    :param word: word to be defined
+    :type word: str
+    :return: definition of word according to wordnet
+    :rtype: str
+    """
     syn = wordnet.synsets(word)[0]
-    return syn.definition()
+    return str(syn.definition())
 
 
 if __name__ == '__main__':
