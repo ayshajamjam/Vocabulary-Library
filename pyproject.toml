@@ -6,6 +6,9 @@ requires = [
 ]
 build-backend="setuptools.build_meta"
 
+[tool.setuptools]
+py-modules = []
+
 [project]
 name = "Vocabulary-Extension"
 authors = [{name = "Aysha Jamal", email = "aj2604@columbia.edu"}]

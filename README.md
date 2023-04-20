@@ -126,7 +126,7 @@ X marks functions that have unit tests written
 6. **Fake data**- Fakr
 7. **Linting**- flake8
 8. **Autoformatter**- black
-9. **Documentation**- GitHub pages, Sphinx
+9. **Documentation**- GitHub pages, Sphinx, Carbon (for picturing Code snippet)
 
 ## Make Commands
 
