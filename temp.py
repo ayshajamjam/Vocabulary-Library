@@ -8,7 +8,7 @@ from recommonmark.transform import AutoStructify
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('../../example_project_python/'))
+sys.path.insert(0, os.path.abspath('../../vocab_project/'))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information

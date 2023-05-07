@@ -2,6 +2,13 @@ Examples
 =============
 
 * get_soup(url) --> Returns scraped BeautifulSoup object
+
+.. image:: ../../images/input_get_soup.png
+  :width: 600
+
+.. image:: ../../images/output_get_soup.png
+  :width: 600
+
 * get_content(soup) --> Returns main content of the page
 
 .. image:: ../../images/input_get_content.png
@@ -85,3 +92,17 @@ Examples
   :width: 600
 
 * get_definition(word) --> Uses wordnet to retrieve definition
+
+.. image:: ../../images/input_get_definition.png
+  :width: 600
+
+.. image:: ../../images/output_get_definition.png
+  :width: 600
+
+* find_advanced_words(corpus) --> Return list of words in any corpus that are deemed 'advanced' and their definitions
+
+.. image:: ../../images/input_find_advanced_words.png
+  :width: 600
+
+.. image:: ../../images/output_find_advanced_words.png
+  :width: 600

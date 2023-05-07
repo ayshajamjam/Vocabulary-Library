@@ -42,7 +42,7 @@ This project is a library that can parse through a corpus of text and determine 
 3. python setup.py build
 4. make lint
 5. make test
-6. Running main: python3 example_project_python/vocab.py
+6. Running main: python3 vocab_project/vocab.py
 
 ## Functions Available
 
@@ -52,13 +52,13 @@ X marks functions that have unit tests written
 - [] get_content(soup)                 --> Returns main content of the page
 - [] get_links(soup)                   --> Return array of links on page
 - [] clean_corpus(corpus)              --> Retain alpha-numeric characters and apostrophes
-- [] retrieve_sentences(corpus)        --> Tokenizes sentences using NLTK
+- [X] retrieve_sentences(corpus)        --> Tokenizes sentences using NLTK
 - [X] retrieve_all_words(corpus)        --> Tokenizes words (including stop words) using NLTK
-- [] retrieve_all_non_stop_words(corpus) --> Tokenizes non-stop-words
+- [X] retrieve_all_non_stop_words(corpus) --> Tokenizes non-stop-words
 - [X] word_count(corpus)                --> Counts number of words (including stop words) in corpus
 - [X] individual_word_count(corpus)     --> Counts number of times each individual word appears
-- [] individual_word_count_non_stop_word --> Counts number of non-stop-words in corpus
-- [] top_k_words(corpus, k)            --> Finds top k words (excluding stop words)
+- [X] individual_word_count_non_stop_word --> Counts number of non-stop-words in corpus
+- [X] top_k_words(corpus, k)            --> Finds top k words (excluding stop words)
 - [] frequency_distributions(corpus)   --> Returns a plot with freq distributions of non-stop words
 - [] get_definition(word)              --> Uses wordnet to retrieve definition
 
@@ -145,8 +145,8 @@ X marks functions that have unit tests written
 Run either: 
 
 1. make test
-2. python -m unittest example_project_python/tests/test_unit.py
-3. python -m unittest example_project_python/tests/test_integration.py
+2. python -m unittest vocab_project/tests/test_unit.py
+3. python -m unittest vocab_project/tests/test_integration.py
 
 **Useful Links**
 1. https://www.youtube.com/watch?v=6tNS--WetLI&ab_channel=CoreySchafer
@@ -169,7 +169,7 @@ RST Cheatsheets
 ### Running Documentation Locally
 
 **To (re)generate rsts for doctrings:**
-1. sphinx-apidoc -o ./source ../example_project_python
+1. sphinx-apidoc -o ./source ../vocab_project
 
 1. cd docs
 2. make clean
