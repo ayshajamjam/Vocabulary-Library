@@ -6,15 +6,8 @@ from nltk.tokenize import sent_tokenize, word_tokenize, WhitespaceTokenizer
 from nltk.corpus import stopwords, wordnet
 from collections import defaultdict
 
-# import matplotlib.pyplot as plt
-# from sklearn.feature_extraction.text import CountVectorizer
-# import pandas as pd
-
-
 # My project code
 
-
-# TODO
 def get_soup(url: str) -> BeautifulSoup:
     """Takes in a url to be scraped and returns a BeautifulSoup object
 
@@ -23,13 +16,33 @@ def get_soup(url: str) -> BeautifulSoup:
     :return: scraped BeautifulSoup object
     :rtype: BeautifulSoup
     """
-    html_text = requests.get(url).text
-    soup = BeautifulSoup(html_text, 'lxml')
+
+    print("Fetching text from url ...")
+
+    # Send HTTP request to retrieve HTML content of webpage
+    try:
+        r = requests.get(url, timeout=7, verify=True)
+        r.raise_for_status()
+    except requests.exceptions.HTTPError as errh:
+        print("HTTP Error")
+        print(errh.args[0])
+        return 0
+    except requests.exceptions.ReadTimeout as errrt:
+        print("Time out")
+        return 0
+    except requests.exceptions.ConnectionError as conerr:
+        print("Connection error")
+        return 0
+    except requests.exceptions.RequestException as errex:
+        print("Exception request")
+        return 0
+
+    print('successful')
+    # Parse the HTML content using html parser (lxml)
+    soup = BeautifulSoup(r.content, 'lxml')
 
     return soup
 
-
-# TODO
 def get_content(soup: BeautifulSoup) -> str:
     """Returns main content of the URL page
 
@@ -38,12 +51,17 @@ def get_content(soup: BeautifulSoup) -> str:
     :return: extracted content of website
     :rtype: str
     """
-    content = soup.find('div', class_="mw-content-container").text
+
+    # Get rid of tags with unneccessary information
+    for data in soup(['style', 'script', 'header', 'footer', 'nav', 'meta']):
+        data.decompose()
+
+    content = soup.get_text()
     content = re.sub('[^A-Za-z0-9]+', ' ', content.lower())
+    print("Webpage length (num characters): ", len(content))
+
     return content
 
-
-# TODO
 def get_links(soup: BeautifulSoup) -> list:
     """Returns array of links
 
@@ -240,16 +258,16 @@ def get_definition(word: str) -> str:
 
 
 if __name__ == '__main__':
-    # soup = get_soup('https://en.wikipedia.org/wiki/Freddie_Mercury')
-    # corpus = get_content(soup)
-    # print(corpus)
+    soup = get_soup('https://www.codecademy.com/article/what-is-json')
+    corpus = get_content(soup)
+    print(corpus)
 
     # links = get_links(soup)
 
     # for link in links:
     #     print(link)
 
-    corpus = "I like to teach math. Math is a beautiful field. I am a person who likes to do math at school and play football afterwards."
+    # corpus = "I like to teach math. Math is a beautiful field. I am a person who likes to do math at school and play football afterwards."
 
     # count = word_count(corpus)
     # print(count)

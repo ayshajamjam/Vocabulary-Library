@@ -42,7 +42,7 @@ This project is a library that can parse through a corpus of text and determine 
 3. python setup.py build
 4. make lint
 5. make test
-6. Running main: python example_project_python/vocab.py
+6. Running main: python3 example_project_python/vocab.py
 
 ## Functions Available
 
