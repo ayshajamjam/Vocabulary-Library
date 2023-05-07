@@ -11,7 +11,7 @@ Currently, it is a library that deals with text and web scraping, providing usef
 [![Build Status](https://github.com/ayshajamjam/vocabulary-extension/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/ayshajamjam/vocabulary-extension/actions?query=workflow%3A%22Build+Status%22)
 [![codecov](https://codecov.io/gh/ayshajamjam/vocabulary-extension/branch/main/graph/badge.svg?token=134dc584-f190-47f1-952d-173a30594f78)](https://codecov.io/gh/ayshajamjam/vocabulary-extension)
 
-[![PyPI](https://img.shields.io/pypi/v/Vocabulary-Extension)](https://pypi.org/project/Vocabulary-Extension/0.1.0/)
+[![PyPI](https://img.shields.io/pypi/v/Vocabulary-Extension)](https://pypi.org/project/Vocabulary-Extension/0.2.0/)
 
 [![Documentation Status](https://readthedocs.org/projects/vocabulary-extension/badge/?version=latest)](https://ayshajamjam.github.io/Vocabulary-Extension/)
 
@@ -99,8 +99,6 @@ X marks functions that have unit tests written
 4. python -m pip install --upgrade twine
 5. Upload to testPyPI: python3 -m twine upload --repository testpypi dist/*
 6. Upload to PyPI: twine upload dist/*
-
-
 
 ## Libraries
 
