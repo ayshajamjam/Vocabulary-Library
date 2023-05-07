@@ -33,13 +33,13 @@ Installation
 #. python setup.py build
 #. make lint
 #. make test
-#. Running main: python example_project_python/vocab.py
+#. Running main: python vocab_project/vocab.py
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   example_project_python.rst
+   vocab_project.rst
    functions.rst
    examples.rst
    modules.rst

@@ -39,6 +39,7 @@ jobs:
     - name: Build 
       run: |
         make build
+        python -m nltk.downloader punkt stopwords
 
     - name: Lint
       run: |

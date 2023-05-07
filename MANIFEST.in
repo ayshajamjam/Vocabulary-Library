@@ -1,4 +1,4 @@
-graft example_project_python
+graft vocab_project
 
 include LICENSE
 include README.md

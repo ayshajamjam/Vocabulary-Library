@@ -17,10 +17,10 @@ Available
 * top_k_words(corpus, k) --> Finds top k words (excluding stop words)
 * frequency_distributions(corpus) --> Returns a plot with freq distributions of non-stop words
 * get_definition(word) --> Uses wordnet to retrieve definition
+* find_advanced_words(corpus) --> Return list of words in any corpus that are deemed 'advanced' and their definitions
 
 To Be Implemented
 ********************
 
-* find_advanced_words(corpus)
 * summarize()
 * (...and more coming soon!)
