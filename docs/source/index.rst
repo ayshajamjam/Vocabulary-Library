@@ -26,7 +26,7 @@ The ultimate goal is to turn this library into a usable web extension. Often tim
 Installation
 ==================
 
-#. clone from GitHub or **pip install Vocabulary-Extension==0.1.0**
+#. clone from GitHub or **pip install Vocabulary-Extension**
 #. Install virtual environment: python -m venv env
 #. Activate virtual env: source env/bin/activate
 #. Install the dependencies: pip install .[develop]
