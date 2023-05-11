@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples &mdash; Vocabulary Extension 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="vocab_project" href="modules.html" />
+    <link rel="prev" title="Functions" href="functions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Vocabulary Extension
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="vocab_project.html">Vocab Project package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="functions.html">Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">vocab_project</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Vocabulary Extension</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>get_soup(url) –&gt; Returns scraped BeautifulSoup object</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_get_soup.png"><img alt="_images/input_get_soup.png" src="_images/input_get_soup.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_get_soup.png"><img alt="_images/output_get_soup.png" src="_images/output_get_soup.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>get_content(soup) –&gt; Returns main content of the page</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_get_content.png"><img alt="_images/input_get_content.png" src="_images/input_get_content.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_get_content.png"><img alt="_images/output_get_content.png" src="_images/output_get_content.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>get_links(soup) –&gt; Return array of links on page</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_links.png"><img alt="_images/input_links.png" src="_images/input_links.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_links.png"><img alt="_images/output_links.png" src="_images/output_links.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>clean_corpus(corpus) –&gt; Retain alpha-numeric characters and apostrophes</p></li>
+<li><p>retrieve_sentences(corpus) –&gt; Tokenizes sentences using NLTK</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_retrieve_sentences.png"><img alt="_images/input_retrieve_sentences.png" src="_images/input_retrieve_sentences.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_retrieve_sentences.png"><img alt="_images/output_retrieve_sentences.png" src="_images/output_retrieve_sentences.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>retrieve_all_words(corpus) –&gt; Tokenizes words (including stop words) using NLTK</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_retrieve_all_words.png"><img alt="_images/input_retrieve_all_words.png" src="_images/input_retrieve_all_words.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_retrieve_all_words.png"><img alt="_images/output_retrieve_all_words.png" src="_images/output_retrieve_all_words.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>retrieve_all_non_stop_words(corpus) –&gt; Tokenizes non-stop-words</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_retrieve_all_non_stop_words.png"><img alt="_images/input_retrieve_all_non_stop_words.png" src="_images/input_retrieve_all_non_stop_words.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_retrieve_all_non_stop_words.png"><img alt="_images/output_retrieve_all_non_stop_words.png" src="_images/output_retrieve_all_non_stop_words.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>word_count(corpus) –&gt; Counts number of words (including stop words) in corpus</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_word_count.png"><img alt="_images/input_word_count.png" src="_images/input_word_count.png" style="width: 600px;" /></a>
+<p><strong>Return:</strong> 25</p>
+<ul class="simple">
+<li><p>individual_word_count(corpus) –&gt; Counts number of times each individual word appears</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_individual_word_count.png"><img alt="_images/input_individual_word_count.png" src="_images/input_individual_word_count.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_individual_word_count.png"><img alt="_images/output_individual_word_count.png" src="_images/output_individual_word_count.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>individual_word_count_non_stop_word –&gt; Counts number of non-stop-words in corpus</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_individual_word_count_non_stop_word.png"><img alt="_images/input_individual_word_count_non_stop_word.png" src="_images/input_individual_word_count_non_stop_word.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_individual_word_count_non_stop_word.png"><img alt="_images/output_individual_word_count_non_stop_word.png" src="_images/output_individual_word_count_non_stop_word.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>top_k_words(corpus, k) –&gt; Finds top k words (excluding stop words)</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_top_k_words.png"><img alt="_images/input_top_k_words.png" src="_images/input_top_k_words.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_top_k_words.png"><img alt="_images/output_top_k_words.png" src="_images/output_top_k_words.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>frequency_distributions(corpus) –&gt; Returns a plot with freq distributions of non-stop words</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_frequency_distribution.png"><img alt="_images/input_frequency_distribution.png" src="_images/input_frequency_distribution.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_frequency_distribution.png"><img alt="_images/output_frequency_distribution.png" src="_images/output_frequency_distribution.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>get_definition(word) –&gt; Uses wordnet to retrieve definition</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_get_definition.png"><img alt="_images/input_get_definition.png" src="_images/input_get_definition.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_get_definition.png"><img alt="_images/output_get_definition.png" src="_images/output_get_definition.png" style="width: 600px;" /></a>
+<ul class="simple">
+<li><p>find_advanced_words(corpus) –&gt; Return list of words in any corpus that are deemed ‘advanced’ and their definitions</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/input_find_advanced_words.png"><img alt="_images/input_find_advanced_words.png" src="_images/input_find_advanced_words.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="_images/output_find_advanced_words.png"><img alt="_images/output_find_advanced_words.png" src="_images/output_find_advanced_words.png" style="width: 600px;" /></a>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="functions.html" class="btn btn-neutral float-left" title="Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="vocab_project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Aysha Jamal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
