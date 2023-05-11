@@ -2,7 +2,7 @@
 
 This project aspires to be a chrome extension that can parse through your screen and determine which vocabulary words you may be unfamiliar with.
 
-Currently, it is a library that deals with text and web scraping, providing useful functions to aid the library's user.
+Currently, it is a library that deals with text and web scraping, providing useful functions to aid the library's user. It is able to take in a URL, extract a corpus of text, and find words that may be considered 'difficult'.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -33,17 +33,6 @@ This project is a library that can parse through a corpus of text and determine 
 
 ![get_links output](images/output_links.png)
 
-## Installation
-
-1. clone from GitHub or pip install Vocabulary-Extension
-2. Install virtual environment: python -m venv env
-3. Activate virtual env: source env/bin/activate
-2. Install the dependencies: pip install .[develop]
-3. python setup.py build
-4. make lint
-5. make test
-6. Running main: python3 vocab_project/vocab.py
-
 ## Functions Available
 
 X marks functions that have unit tests written
@@ -61,11 +50,22 @@ X marks functions that have unit tests written
 - [X] top_k_words(corpus, k)            --> Finds top k words (excluding stop words)
 - [] frequency_distributions(corpus)   --> Returns a plot with freq distributions of non-stop words
 - [] get_definition(word)              --> Uses wordnet to retrieve definition
+- [] find_advanced_words(corpus)
 
 ## Functions To Be Implemented
 
-- find_advanced_words(corpus)
 - summarize()
+
+## Installation
+
+1. clone from GitHub or pip install Vocabulary-Extension
+2. Install virtual environment: python -m venv env
+3. Activate virtual env: source env/bin/activate
+2. Install the dependencies: pip install .[develop]
+3. python setup.py build
+4. make lint
+5. make test
+6. Running main: python3 vocab_project/vocab.py
 
 ## Installation (manual)
 
@@ -91,14 +91,6 @@ X marks functions that have unit tests written
 18. pip install sphinx_rtd_theme
 19. pip install recommonmark
 20. pip install sphinxcontrib-napoleon
-
-#### Upload to PyPI
-1. python -m pip install --upgrade pip
-2. python -m pip install --upgrade build
-3. python -m build
-4. python -m pip install --upgrade twine
-5. Upload to testPyPI: python3 -m twine upload --repository testpypi dist/*
-6. Upload to PyPI: twine upload dist/*
 
 ## Libraries
 
@@ -128,15 +120,15 @@ X marks functions that have unit tests written
 
 ## Make Commands
 
-**make:** list available commands
-**make develop:** install and build this library and its dependencies using pip
-**make build:** build the library using setuptools
-**make lint:** perform static analysis of this library with flake8 and black
-**make format:** autoformat this library using black
-**make annotate:** run type checking using mypy
-**make test:** run automated tests with pytest
-**make coverage:** run automated tests with pytest and collect coverage information
-**make dist:** package library for distribution
+- **make:** list available commands
+- **make develop:** install and build this library and its dependencies using pip
+- **make build:** build the library using setuptools
+- **make lint:** perform static analysis of this library with flake8 and black
+- **make format:** autoformat this library using black
+- **make annotate:** run type checking using mypy
+- **make test:** run automated tests with pytest
+- **make coverage:** run automated tests with pytest and collect coverage information
+- **make dist:** package library for distribution
 
 ## Testing Commands
 
@@ -166,7 +158,8 @@ RST Cheatsheets
 
 ### Running Documentation Locally
 
-**To (re)generate rsts for doctrings:**
+#### To (re)generate rsts for doctrings
+
 1. sphinx-apidoc -o ./source ../vocab_project
 
 1. cd docs
@@ -174,3 +167,11 @@ RST Cheatsheets
 3. make html
 4. open build/html/index.html
 
+#### Upload Documenation to PyPI
+
+1. python -m pip install --upgrade pip
+2. python -m pip install --upgrade build
+3. python -m build
+4. python -m pip install --upgrade twine
+5. Upload to testPyPI: python3 -m twine upload --repository testpypi dist/*
+6. Upload to PyPI: twine upload dist/*
